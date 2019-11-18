@@ -1,0 +1,21 @@
+[vars]
+  devkitpro = /opt/devkitpro
+  devkitppc = $(config vars.devkitpro)/devkitPPC
+  portlibs = $(config vars.devkitpro)/portlibs
+  libogc = $(config vars.devkitpro)/libogc
+  prefix = $(config vars.devkitppc)/bin/powerpc-eabi-
+
+[cxx]
+  cpp = $(config vars.prefix)gcc
+  cc = $(config vars.prefix)gcc
+  ld = $(config vars.prefix)g++
+  cxxpp = $(config vars.prefix)g++
+  cxx = $(config vars.prefix)g++
+  aspp = $(config vars.prefix)gcc
+  as = $(config vars.prefix)as
+  ar = $(config vars.prefix)gcc-ar
+  cflags = -DGEKKO -mrvl -mcpu=750 -meabi -mhard-float
+  cppflags = $(config cxx.cflags)
+
+[parser]
+  default_build_file_syntax = SKYLARK

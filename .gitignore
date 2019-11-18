@@ -1,3 +1,9 @@
 /lib/
 /source/wii_release/
 /source/cube_release/
+.buckd
+buck-out
+.buckconfig.local
+.buckconfig.d
+buckaroo
+buckaroo_macros.bzl
