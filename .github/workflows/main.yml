@@ -4,16 +4,14 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Install buck
-      run: |
-        mkdir -p bin
-        wget https://github.com/njlr/buck-warp/releases/download/v0.3.0/buck-2019.01.10.01-linux -O bin/buck
-        chmod +x bin/buck
+      - uses: actions/checkout@v1
+      - name: Install buck
+        run: |
+          wget https://github.com/facebook/buck/releases/download/v2019.10.17.01/buck.2019.10.17.01_all.deb
+          dpkg -i buck.2019.10.17.01_all.deb
 
-    - name: Build
-      run: ./bin/buck build :ext2fs
+      - name: Build
+        run: buck build :ext2fs
