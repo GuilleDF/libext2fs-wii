@@ -6,9 +6,9 @@ cxx_library(
   header_namespace = '',
   exported_headers = {
     'ext2.h': 'include/ext2.h',
+    'ext2_frag.h': 'source/ext2_frag.h',
   },
   include_directories = [
-    portlibs + '/wii',
     portlibs + '/ppc',
     libogc + '/include',
   ],
