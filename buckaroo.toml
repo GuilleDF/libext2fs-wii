@@ -1,1 +1,1 @@
-targets = [ "//:ext2fs" ]
+targets = [ ":ext2fs" ]
